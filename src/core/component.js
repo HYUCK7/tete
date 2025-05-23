@@ -1,10 +1,13 @@
-import {state} from '../hooks/state';
 export default class Component{
     $target;
+    stateVal;
+    
     constructor($target){
         this.$target = $target;
-        
-        const [state, setState] = state.useState(this.initState());
+        this.setup()
+        this.setEvent()
     }
-
+    setup(){}
+    template(){return ''};
+    setEvent(){}
 }
