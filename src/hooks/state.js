@@ -24,6 +24,7 @@ function state() {
     const _render = (rootComponent, root) => {
         const {root, rootComponent} = options;
         if(!root || !rootComponent) return;
+        
         root.innerHTML = rootComponent();
         options.currentStateKey = 0
         options.renderCount += 1;
